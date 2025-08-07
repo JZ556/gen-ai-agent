@@ -45,4 +45,7 @@ raw_response = agent_executor.invoke({"query": "What is the capital of France?"}
 
 print(raw_response)
 
+structured_response = parser.parse(raw_response["output"])
+summary = structured_response.summary
+print(summary)
 
